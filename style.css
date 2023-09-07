@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    font-family: 'Oxygen Mono', monospace;
+    font-size: 0.8rem;
+}
+
+body{
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #11121b;
+    flex-direction: column;
+}
+
+.theGame{
+    width: 65vmin;
+    height: 70vmin;
+    border-radius: 10px;
+    background-color: #151830;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.scorePannel{
+    display: flex;
+    border-radius: inherit;
+    justify-content: space-between;
+    color: #eee;
+    background-color: rgb(27, 27, 30);
+    padding: 1rem;
+}
+
+.gameBoard{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(30,1fr);
+    grid-template-rows: repeat(30,1fr);
+}
+
+.food{
+    background-color: rgb(71, 237, 104);
+}
+
+.snake{
+    background-color: rgb(253, 63, 63);
+}
+
+.gameOverPannel{
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    background-color:#11121b;
+    border-top: 0.1px solid rgb(110, 110, 110);
+    border-bottom: 0.1px solid rgb(110, 110, 110);
+}
+
+.gameOverPannel >p {
+    color: #eee;
+    margin: 10px;
+}
+
+.gameOverPannel> button{
+    padding: 10px 20px;
+    background-color: #151830;
+    color: #eee;
+    cursor: pointer;
+    box-shadow: 1px 2px 5px black;
+}
+
+.gameOverPannel> button:hover{
+    background-color: #1a1f3f;
+}
+
+.hidden{
+    display: none;
+}
+
+.phoneControls{
+    margin-top: 10px;
+    display: none;
+}
+
+.upcontrols{
+    text-align: center;
+    margin: 5px 5px;
+}
+
+.controls{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border: 1px solid white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.othercontrols{
+    margin-top: 40px;
+}
+
+.controls:hover{
+    background-color: #c8cad7;
+}
+
+@media screen and (max-width:800px) {
+    .theGame{
+        width: 95%;
+        height: 120vmin;
+    }
+
+    .phoneControls{
+        display:initial;
+    }
+
+}
